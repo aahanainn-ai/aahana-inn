@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luxurious Rooms and Suites at Aahana Inn, Dumka.">
+    <meta name="keywords" content="hotel rooms, aahana inn suites, dumka accommodation, premium stay">
+    <meta name="author" content="Aahana Inn">
+    <title>Rooms & Suites | Aahana Inn</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpeg">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="rooms.css">
+</head>
+<body>
+    <!-- ===== PRELOADER ===== -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+            <p class="preloader-text">Aahana Inn</p>
+        </div>
+    </div>
+
+    <!-- ===== CURSOR FOLLOWER ===== -->
+    <div class="cursor-follower"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar glass-nav">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <div class="logo-wrapper">
+                    <img src="assets/logo.jpeg" alt="Aahana Inn Logo" class="logo-img" onerror="this.style.display='none'">
+                    <div class="logo-text">
+                        <span class="logo-name">Aahana</span>
+                        <span class="logo-tagline">Inn</span>
+                    </div>
+                </div>
+            </a>
+
+            <div class="navbar-menu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-link-text">Home</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="rooms.html" class="nav-link active">
+                    <span class="nav-link-text">Rooms</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="booking.html" class="nav-link">
+                    <span class="nav-link-text">Booking</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="restaurant.html" class="nav-link">
+                    <span class="nav-link-text">Restaurant</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="gallery.html" class="nav-link">
+                    <span class="nav-link-text">Gallery</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="facilities.html" class="nav-link">
+                    <span class="nav-link-text">Facilities</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="reviews.html" class="nav-link">
+                    <span class="nav-link-text">Reviews</span>
+                    <span class="nav-link-line"></span>
+                </a>
+            </div>
+
+            <div class="navbar-right">
+                <a href="booking.html" class="btn-book magnetic-btn">
+                    <span>Book Now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <button class="menu-toggle">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== FULLSCREEN MENU FOR MOBILE ===== -->
+    <div class="fullscreen-menu">
+        <div class="menu-bg"></div>
+        <div class="menu-container">
+            <div class="menu-header">
+                <a href="index.html" class="menu-logo">
+                    <img src="assets/logo.jpeg" alt="Aahana Inn" style="width:40px; border-radius:50%; margin-right:10px;" onerror="this.style.display='none'">
+                    <span>Aahana Inn</span>
+                </a>
+                <button class="menu-close">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="menu-content">
+                <div class="menu-links">
+                    <a href="index.html" class="menu-link" data-text="Home"><span class="menu-link-text">Home</span></a>
+                    <a href="rooms.html" class="menu-link" data-text="Rooms"><span class="menu-link-text">Rooms & Suites</span></a>
+                    <a href="booking.html" class="menu-link" data-text="Booking"><span class="menu-link-text">Booking</span></a>
+                    <a href="restaurant.html" class="menu-link" data-text="Restaurant"><span class="menu-link-text">Restaurant</span></a>
+                    <a href="gallery.html" class="menu-link" data-text="Gallery"><span class="menu-link-text">Gallery</span></a>
+                    <a href="facilities.html" class="menu-link" data-text="Facilities"><span class="menu-link-text">Facilities</span></a>
+                    <a href="reviews.html" class="menu-link" data-text="Reviews"><span class="menu-link-text">Reviews</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+        <div class="parallax-bg" id="hero-parallax">
+            <div class="hero-slide-bg" style="background-image: url('https://images.unsplash.com/photo-1542314831-c6a4d27bd04d?auto=format&fit=crop&w=1920&q=80');"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <div class="hero-badge" data-aos="fade-down" data-aos-duration="1000">
+                <span class="badge-line"></span>
+                <span class="badge-text">Accommodations</span>
+                <span class="badge-line"></span>
+            </div>
+            <h1 class="hero-title" data-aos="zoom-out-up" data-aos-duration="1200" data-aos-delay="200">
+                <span class="title-main">Rooms & Suites</span>
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                Discover your perfect sanctuary of luxury and comfort.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== ROOMS GRID SECTION ===== -->
+    <section class="rooms-page-section">
+        <div class="container">
+            
+            <div class="rooms-filter-wrap" data-aos="fade-up">
+                <p class="filter-label">Filter by:</p>
+                <div class="room-filters">
+                    <button class="filter-btn active magnetic-btn" data-filter="all">All Rooms</button>
+                    <button class="filter-btn magnetic-btn" data-filter="luxury">Luxury</button>
+                    <button class="filter-btn magnetic-btn" data-filter="suites">Suites</button>
+                    <button class="filter-btn magnetic-btn" data-filter="family">Family</button>
+                </div>
+            </div>
+
+            <div class="premium-rooms-grid">
+                
+                <!-- Room 1: Deluxe -->
+                <div class="room-card-premium glassmorphism" data-category="luxury" data-aos="fade-up" data-aos-delay="100">
+                    <div class="room-image image-zoom">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Deluxe Room">
+                        <div class="room-badge badge-popular">POPULAR</div>
+                        <!-- Hover Overlay specific to screenshots -->
+                        <div class="room-overlay">
+                            <a href="booking.html" class="btn-white-pill magnetic-btn">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title">Deluxe Room</h3>
+                        <p class="room-description">Spacious comfort with panoramic city views and premium amenities.</p>
+                        <div class="room-features">
+                            <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span><i class="fas fa-tv"></i> Smart TV</span>
+                            <span><i class="fas fa-wind"></i> AC</span>
+                        </div>
+                        <div class="room-footer">
+                            <a href="#" class="btn-outline-gold magnetic-btn">View Details</a>
+                            <div class="room-price-tag">
+                                <span class="price-from">From</span> <span class="price-amount">₹2,999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 2: Executive Suite -->
+                <div class="room-card-premium glassmorphism" data-category="suites" data-aos="fade-up" data-aos-delay="200">
+                    <div class="room-image image-zoom">
+                        <img src="https://images.pexels.com/photos/34496715/pexels-photo-34496715.jpeg" alt="Executive Suite">
+                        <div class="room-badge badge-premium">PREMIUM</div>
+                        <div class="room-overlay">
+                            <a href="booking.html" class="btn-white-pill magnetic-btn">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title">Executive Suite</h3>
+                        <p class="room-description">Luxurious suite with separate living area and exclusive amenities.</p>
+                        <div class="room-features">
+                            <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span><i class="fas fa-couch"></i> Living Area</span>
+                            <span><i class="fas fa-glass-martini"></i> Mini Bar</span>
+                        </div>
+                        <div class="room-footer">
+                            <a href="#" class="btn-outline-gold magnetic-btn">View Details</a>
+                            <div class="room-price-tag">
+                                <span class="price-from">From</span> <span class="price-amount">₹4,999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 3: Family Suite -->
+                <div class="room-card-premium glassmorphism" data-category="family" data-aos="fade-up" data-aos-delay="300">
+                    <div class="room-image image-zoom">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80" alt="Family Suite">
+                        <div class="room-badge badge-family">FAMILY</div>
+                        <div class="room-overlay">
+                            <a href="booking.html" class="btn-white-pill magnetic-btn">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title">Family Suite</h3>
+                        <p class="room-description">The ultimate luxury experience with ample private space for the whole family.</p>
+                        <div class="room-features">
+                            <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span><i class="fas fa-hot-tub"></i> Jacuzzi</span>
+                            <span><i class="fas fa-concierge-bell"></i> Service</span>
+                        </div>
+                        <div class="room-footer">
+                            <a href="#" class="btn-outline-gold magnetic-btn">View Details</a>
+                            <div class="room-price-tag">
+                                <span class="price-from">From</span> <span class="price-amount">₹6,999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 4: Presidential Suite -->
+                <div class="room-card-premium glassmorphism" data-category="suites" data-aos="fade-up" data-aos-delay="100">
+                    <div class="room-image image-zoom">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=80" alt="Presidential Suite">
+                        <div class="room-badge badge-premium">ROYAL</div>
+                        <div class="room-overlay">
+                            <a href="booking.html" class="btn-white-pill magnetic-btn">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title">Presidential Suite</h3>
+                        <p class="room-description">Our most exclusive accommodation featuring a private terrace and personal butler.</p>
+                        <div class="room-features">
+                            <span><i class="fas fa-user-tie"></i> Butler</span>
+                            <span><i class="fas fa-mountain"></i> View</span>
+                            <span><i class="fas fa-wine-bottle"></i> Bar</span>
+                        </div>
+                        <div class="room-footer">
+                            <a href="#" class="btn-outline-gold magnetic-btn">View Details</a>
+                            <div class="room-price-tag">
+                                <span class="price-from">From</span> <span class="price-amount">₹12,999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 5: Honeymoon Suite -->
+                <div class="room-card-premium glassmorphism" data-category="luxury" data-aos="fade-up" data-aos-delay="200">
+                    <div class="room-image image-zoom">
+                        <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=800&q=80" alt="Honeymoon Suite">
+                        <div class="room-badge badge-popular">ROMANTIC</div>
+                        <div class="room-overlay">
+                            <a href="booking.html" class="btn-white-pill magnetic-btn">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title">Honeymoon Suite</h3>
+                        <p class="room-description">Designed for romance, featuring a king-size canopy bed and couple's spa tub.</p>
+                        <div class="room-features">
+                            <span><i class="fas fa-heart"></i> Decor</span>
+                            <span><i class="fas fa-bath"></i> Spa Tub</span>
+                            <span><i class="fas fa-glass-cheers"></i> Wine</span>
+                        </div>
+                        <div class="room-footer">
+                            <a href="#" class="btn-outline-gold magnetic-btn">View Details</a>
+                            <div class="room-price-tag">
+                                <span class="price-from">From</span> <span class="price-amount">₹5,999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 6: Standard Twin -->
+                <div class="room-card-premium glassmorphism" data-category="luxury" data-aos="fade-up" data-aos-delay="300">
+                    <div class="room-image image-zoom">
+                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80" alt="Standard Twin">
+                        <div class="room-badge badge-family">ECONOMY</div>
+                        <div class="room-overlay">
+                            <a href="booking.html" class="btn-white-pill magnetic-btn">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-title">Standard Twin Room</h3>
+                        <p class="room-description">Comfortable and practical, perfect for business travelers or friends sharing.</p>
+                        <div class="room-features">
+                            <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span><i class="fas fa-bed"></i> Twin Beds</span>
+                            <span><i class="fas fa-coffee"></i> Maker</span>
+                        </div>
+                        <div class="room-footer">
+                            <a href="#" class="btn-outline-gold magnetic-btn">View Details</a>
+                            <div class="room-price-tag">
+                                <span class="price-from">From</span> <span class="price-amount">₹1,999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== AMENITIES HIGHLIGHT ===== -->
+    <section class="room-amenities-highlight">
+        <div class="container">
+            <div class="amenities-box glassmorphism" data-aos="zoom-in">
+                <div class="amenity-item">
+                    <i class="fas fa-concierge-bell"></i>
+                    <h4>24/7 Room Service</h4>
+                    <p>In-room dining at your convenience.</p>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-pump-soap"></i>
+                    <h4>Premium Toiletries</h4>
+                    <p>Exclusive organic bath products.</p>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Secure Access</h4>
+                    <p>Keycard entry and secure safes.</p>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-broom"></i>
+                    <h4>Daily Housekeeping</h4>
+                    <p>Immaculate cleaning twice daily.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MODERN FOOTER WITH INTEGRATED MAP ===== -->
+    <footer class="modern-footer">
+        <div class="footer-top-accent"></div>
+        <div class="container">
+            <div class="footer-main-grid">
+                
+                <div class="footer-brand-col" data-aos="fade-up" data-aos-delay="100">
+                    <a href="index.html" class="footer-brand-logo">
+                        <img src="assets/logo.jpeg" alt="Aahana Inn Logo" style="width: 60px; border-radius: 50%; border: 2px solid #D4AF37; margin-bottom: 15px;" onerror="this.style.display='none'">
+                        <span class="logo-name">Aahana Inn</span>
+                    </a>
+                    <p class="footer-bio">Experience the true meaning of premium comfort and hospitality in the heart of Dumka.</p>
+                    <p class="proprietor-info">Managed by: <strong>Manish Kumar Gupta</strong> (Proprietor)</p>
+                    
+                    <div class="footer-socials">
+                        <a href="#" class="magnetic-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/aahanainn" target="_blank" class="magnetic-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="magnetic-btn"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-col" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Home</a></li>
+                        <li><a href="rooms.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Rooms & Suites</a></li>
+                        <li><a href="booking.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Booking</a></li>
+                        <li><a href="restaurant.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Restaurant</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact-col" data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-contact-list">
+                        <li class="glass-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <a href="https://maps.app.goo.gl/erCbBhzBPLD3dCs27?g_st=ac" target="_blank" rel="noopener" style="color:inherit; text-decoration:none;">Dumka Bypass, Near Sandhya Sagar Restaurant, Balia Dangal, Dumka, Jharkhand 814110</a>
+                        </li>
+                        <li class="glass-contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 9204843479</span>
+                        </li>
+                        <li class="glass-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:support@aahanainn.com" style="color:inherit; text-decoration:none;">support@aahanainn.com</a>
+                        </li>
+                        <li class="glass-contact-item">
+                            <i class="fab fa-google"></i>
+                            <a href="mailto:aahanainn@gmail.com" style="color:inherit; text-decoration:none;">aahanainn@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-map-col" data-aos="fade-up" data-aos-delay="400">
+                    <h4 class="footer-heading">Our Location</h4>
+                    <div class="footer-map-wrapper" style="position: relative;">
+                        <!-- Exact Static Pin Embed -->
+                        <a href="https://maps.app.goo.gl/erCbBhzBPLD3dCs27?g_st=ac" target="_blank" rel="noopener" aria-label="Open Aahana Inn location in Google Maps" style="display:block;">
+                            <iframe 
+                                src="https://maps.google.com/maps?q=24.2854039,87.2459704&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                                style="border:0; pointer-events:none; width:100%; height:200px; border-radius:15px; filter: grayscale(50%) contrast(1.1);" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </a>
+                        
+                        <!-- Directions Button -->
+                        <a href="https://maps.app.goo.gl/erCbBhzBPLD3dCs27?g_st=ac" target="_blank" rel="noopener" class="btn-directions magnetic-btn">
+                            <i class="fas fa-directions"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 Aahana Inn. All Rights Reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top magnetic-btn" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="rooms.js"></script>
+</body>
+</html>

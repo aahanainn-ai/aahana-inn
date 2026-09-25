@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your stay at Aahana Inn, Dumka's premium luxury hotel.">
+    <meta name="keywords" content="hotel booking, aahana inn reservation, dumka accommodation, book luxury room">
+    <meta name="author" content="Aahana Inn">
+    <title>Reservation | Aahana Inn</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpeg">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <!-- ===== PRELOADER ===== -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+            <p class="preloader-text">Aahana Inn</p>
+        </div>
+    </div>
+
+    <!-- ===== CURSOR FOLLOWER ===== -->
+    <div class="cursor-follower"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar glass-nav">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <div class="logo-wrapper">
+                    <img src="assets/logo.jpeg" alt="" class="logo-img" onerror="this.style.display='none'">
+                    <div class="logo-text">
+                        <span class="logo-name">Aahana</span>
+                        <span class="logo-tagline">Inn</span>
+                    </div>
+                </div>
+            </a>
+
+            <div class="navbar-menu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-link-text">Home</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="rooms.html" class="nav-link">
+                    <span class="nav-link-text">Rooms</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="booking.html" class="nav-link active">
+                    <span class="nav-link-text">Booking</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="restaurant.html" class="nav-link">
+                    <span class="nav-link-text">Restaurant</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                 <a href="gallery.html" class="nav-link">
+                    <span class="nav-link-text">Gallery</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="facilities.html" class="nav-link">
+                    <span class="nav-link-text">Facilities</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="reviews.html" class="nav-link">
+                    <span class="nav-link-text">Reviews</span>
+                    <span class="nav-link-line"></span>
+                </a>
+            </div>
+
+            <div class="navbar-right">
+                <button class="menu-toggle">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== FULLSCREEN MENU FOR MOBILE ===== -->
+    <div class="fullscreen-menu">
+        <div class="menu-bg"></div>
+        <div class="menu-container">
+            <div class="menu-header">
+                <a href="index.html" class="menu-logo">
+                    <span>Aahana Inn</span>
+                </a>
+                <button class="menu-close"><span></span><span></span></button>
+            </div>
+            <div class="menu-content">
+                <div class="menu-links">
+                    <a href="index.html" class="menu-link" data-text="Home"><span class="menu-link-text">Home</span></a>
+                    <a href="rooms.html" class="menu-link" data-text="Rooms"><span class="menu-link-text">Rooms & Suites</span></a>
+                    <a href="booking.html" class="menu-link" data-text="Booking"><span class="menu-link-text">Booking</span></a>
+                    <a href="restaurant.html" class="menu-link" data-text="Restaurant"><span class="menu-link-text">Restaurant</span></a>
+                    <a href="gallery.html" class="menu-link" data-text="Gallery"><span class="menu-link-text">Gallery</span></a>
+                    <a href="facilities.html" class="menu-link" data-text="Facilities"><span class="menu-link-text">Facilities</span></a>
+                    <a href="reviews.html" class="menu-link" data-text="Reviews"><span class="menu-link-text">Reviews</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+        <div class="parallax-bg" id="hero-parallax">
+            <div class="hero-slide-bg" style="background-image: url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1920&q=80'); filter: brightness(0.7);"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <div class="hero-badge" data-aos="fade-down" data-aos-duration="1000">
+                <span class="badge-line"></span>
+                <span class="badge-text">Reservations</span>
+                <span class="badge-line"></span>
+            </div>
+            <h1 class="hero-title" data-aos="zoom-out-up" data-aos-duration="1200" data-aos-delay="200">
+                <span class="title-main">Secure Your Stay</span>
+            </h1>
+        </div>
+    </section>
+
+    <!-- ===== MAIN BOOKING SECTION ===== -->
+    <section class="booking-page-section">
+        <div class="container">
+            <div class="booking-layout">
+                
+                <!-- Left Column: Booking Form -->
+                <div class="booking-form-area" data-aos="fade-right" data-aos-duration="1000">
+                    <form id="mainBookingForm" class="glassmorphism p-40">
+                        
+                        <!-- Step 1: Stay Details -->
+                        <h3 class="form-section-title">1. Your Stay Details</h3>
+                        <div class="form-row-grid">
+                            <div class="form-group">
+                                <label class="form-label"><i class="fas fa-calendar-alt"></i> Check In</label>
+                                <input type="date" class="form-input" id="checkin" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label"><i class="fas fa-calendar-alt"></i> Check Out</label>
+                                <input type="date" class="form-input" id="checkout" required>
+                            </div>
+                        </div>
+                        <div class="form-row-grid">
+                            <div class="form-group">
+                                <label class="form-label"><i class="fas fa-user"></i> Adults</label>
+                                <select class="form-input" id="adultsCount">
+                                    <option value="1">1 Adult</option>
+                                    <option value="2" selected>2 Adults</option>
+                                    <option value="3">3 Adults</option>
+                                    <option value="4">4 Adults</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label"><i class="fas fa-child"></i> Children</label>
+                                <select class="form-input" id="childrenCount">
+                                    <option value="0" selected>0 Children</option>
+                                    <option value="1">1 Child</option>
+                                    <option value="2">2 Children</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Room Selection -->
+                        <h3 class="form-section-title mt-40">2. Select Accommodation</h3>
+                        <div class="form-group">
+                            <label class="form-label"><i class="fas fa-bed"></i> Room Category</label>
+                            <select class="form-input" id="roomType" required>
+                                <option value="2999" data-name="Deluxe Room">Deluxe Room - ₹2,999/night</option>
+                                <option value="4999" data-name="Executive Suite" selected>Executive Suite - ₹4,999/night</option>
+                                <option value="5999" data-name="Honeymoon Suite">Honeymoon Suite - ₹5,999/night</option>
+                                <option value="6999" data-name="Family Suite">Family Suite - ₹6,999/night</option>
+                                <option value="12999" data-name="Presidential Suite">Presidential Suite - ₹12,999/night</option>
+                            </select>
+                        </div>
+
+                        <!-- Step 3: Enhancements -->
+                        <h3 class="form-section-title mt-40">3. Enhance Your Stay</h3>
+                        <div class="addons-grid">
+                            <label class="addon-checkbox glass-contact-item">
+                                <input type="checkbox" class="addon-input" value="1500" data-name="Airport Transfer">
+                                <div class="addon-content">
+                                    <i class="fas fa-car"></i>
+                                    <div>
+                                        <h4>Airport Transfer</h4>
+                                        <p>+₹1,500</p>
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="addon-checkbox glass-contact-item">
+                                <input type="checkbox" class="addon-input" value="2500" data-name="Spa Package">
+                                <div class="addon-content">
+                                    <i class="fas fa-spa"></i>
+                                    <div>
+                                        <h4>Spa Package</h4>
+                                        <p>+₹2,500</p>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Step 4: Personal Information -->
+                        <h3 class="form-section-title mt-40">4. Guest Information</h3>
+                        <div class="form-row-grid">
+                            <div class="form-group">
+                                <input type="text" class="form-input" id="firstName" placeholder="First Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-input" id="lastName" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                        <div class="form-row-grid">
+                            <div class="form-group">
+                                <input type="email" class="form-input" id="guestEmail" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-input" id="guestPhone" placeholder="Phone Number" required>
+                            </div>
+                        </div>
+                        <div class="form-group mt-20">
+                            <textarea class="form-input" id="specialRequests" rows="4" placeholder="Special Requests (Optional)"></textarea>
+                        </div>
+
+                        <!-- WhatsApp Booking Button -->
+                        <button type="submit" class="btn btn-gold btn-block magnetic-btn mt-40" style="padding: 20px; font-size: 1.1rem; gap: 10px;">
+                            <span>Confirm via WhatsApp</span>
+                            <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right Column: Order Summary (Sticky) -->
+                <div class="booking-summary-area" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="summary-card glassmorphism sticky-summary">
+                        <h3 class="summary-title">Reservation Summary</h3>
+                        
+                        <div class="summary-image">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=400&q=80" id="summaryRoomImg" alt="Room">
+                        </div>
+
+                        <div class="summary-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Room Type:</span>
+                                <span class="detail-value" id="summaryRoomName">Executive Suite</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Check-in:</span>
+                                <span class="detail-value" id="summaryCheckin">-</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Check-out:</span>
+                                <span class="detail-value" id="summaryCheckout">-</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Duration:</span>
+                                <span class="detail-value" id="summaryNights">1 Night(s)</span>
+                            </div>
+                        </div>
+
+                        <hr class="summary-divider">
+
+                        <div class="price-breakdown">
+                            <div class="price-row">
+                                <span>Room Rate (<span id="calcNights">1</span> nights)</span>
+                                <span id="summaryRoomPrice">₹4,999</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Add-ons</span>
+                                <span id="summaryAddonsPrice">₹0</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Taxes & Fees (18% GST)</span>
+                                <span id="summaryTaxes">₹900</span>
+                            </div>
+                        </div>
+
+                        <hr class="summary-divider">
+
+                        <div class="total-row">
+                            <span>Total Estimate</span>
+                            <span class="total-price" id="summaryTotal">₹5,899</span>
+                        </div>
+
+                        <div class="trust-badges mt-20">
+                            <span><i class="fas fa-lock"></i> Secure Direct Booking</span>
+                            <span><i class="fas fa-shield-alt"></i> Best Rate Guarantee</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MODERN FOOTER ===== -->
+    <footer class="modern-footer">
+        <div class="footer-top-accent"></div>
+        <div class="container">
+            <div class="footer-main-grid">
+                
+                <div class="footer-brand-col">
+                    <a href="index.html" class="footer-brand-logo">
+                        <img src="assets/logo.jpeg" alt="Aahana Inn Logo" style="width: 60px; border-radius: 50%; border: 2px solid #D4AF37; margin-bottom: 15px;" onerror="this.style.display='none'">
+                        <span class="logo-name">Aahana Inn</span>
+                    </a>
+                    <p class="footer-bio">Experience the true meaning of premium comfort and hospitality in the heart of Dumka.</p>
+                    <p class="proprietor-info">Managed by: <strong>Manish Kumar Gupta</strong> (Proprietor)</p>
+                    
+                    <div class="footer-socials">
+                        <a href="#" class="magnetic-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/aahanainn?stkn=MTc1dm82ZXY0ZHBreA==" class="magnetic-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="magnetic-btn"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Home</a></li>
+                        <li><a href="rooms.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Rooms & Suites</a></li>
+                        <li><a href="booking.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Booking</a></li>
+                        <li><a href="restaurant.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Restaurant</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact-col">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-contact-list">
+                        <li class="glass-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <a href="https://maps.app.goo.gl/erCbBhzBPLD3dCs27?g_st=ac" target="_blank" rel="noopener" style="color:inherit;">Dumka Bypass, Near Sandhya Sagar Restaurant, Balia Dangal, Dumka, Jharkhand 814110</a>
+                        </li>
+                        <li class="glass-contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 9204843479</span>
+                        </li>
+                        <li class="glass-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:support@aahanainn.com" style="color:inherit;">support@aahanainn.com</a>
+                        </li>
+                        <li class="glass-contact-item">
+                            <i class="fab fa-google"></i>
+                            <a href="mailto:aahanainn@gmail.com" style="color:inherit;">aahanainn@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+<!-- Column 4: Google Map -->
+<div class="footer-map-col" data-aos="fade-up" data-aos-delay="400">
+    <h4 class="footer-heading">Our Location</h4>
+    <div class="footer-map-wrapper" style="position: relative;">
+        <!-- Exact Static Pin Embed -->
+        <a href="https://maps.app.goo.gl/erCbBhzBPLD3dCs27?g_st=ac" target="_blank" rel="noopener" aria-label="Open Aahana Inn location in Google Maps" style="display:block;">
+            <iframe 
+                src="https://maps.google.com/maps?q=24.276842,87.257179&t=&z=18&ie=UTF8&iwloc=&output=embed" 
+                style="border:0; pointer-events:none; width:100%; height:200px;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </a>
+        
+        <!-- Directions Button — opens the exact hotel location -->
+        <a href="https://maps.app.goo.gl/erCbBhzBPLD3dCs27?g_st=ac" target="_blank" rel="noopener" class="btn-directions magnetic-btn">
+            <i class="fas fa-directions"></i> Get Directions
+        </a>
+    </div>
+</div>
+            </div>
+            
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 Aahana Inn. All Rights Reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top magnetic-btn" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="booking.js"></script>
+</body>
+</html>

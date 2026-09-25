@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aahana Inn Gallery - Explore luxury rooms, gourmet restaurant, fine dining, premium amenities">
+    <meta name="keywords" content="hotel gallery, luxury rooms, 5 star hotel, premium amenities, aahana inn, fine dining, suite">
+    <meta name="author" content="Aahana Inn">
+    <title>Aahana Inn Gallery - 5 Star Luxury Experience</title>
+    
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Montserrat:wght@200;300;400;500;600;700;800&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <!-- ===== PRELOADER ===== -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <h2 class="preloader-title">Aahana Inn</h2>
+            <div class="preloader-gallery">
+                <div class="preloader-img img1"></div>
+                <div class="preloader-img img2"></div>
+                <div class="preloader-img img3"></div>
+                <div class="preloader-img img4"></div>
+                <div class="preloader-img img5"></div>
+            </div>
+            <p class="preloader-text">Loading Gallery Experience...</p>
+        </div>
+    </div>
+
+    <!-- ===== CUSTOM CURSOR ===== -->
+    <div class="cursor-follower"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- ===== RESPONSIVE NAVIGATION ===== -->
+    <nav class="navbar glass-nav">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <div class="logo-wrapper">
+                    <img src="assets/logo.jpeg" alt="Aahana Inn Logo" class="logo-img" onerror="this.style.display='none'">
+                    <div class="logo-text">
+                        <span class="logo-name">Aahana</span>
+                        <span class="logo-tagline">Inn</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- User Requested Navbar Menu -->
+            <div class="navbar-menu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-link-text">Home</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="rooms.html" class="nav-link">
+                    <span class="nav-link-text">Rooms</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="booking.html" class="nav-link">
+                    <span class="nav-link-text">Booking</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="restaurant.html" class="nav-link">
+                    <span class="nav-link-text">Restaurant</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="gallery.html" class="nav-link active">
+                    <span class="nav-link-text">Gallery</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="facilities.html" class="nav-link">
+                    <span class="nav-link-text">Facilities</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="reviews.html" class="nav-link">
+                    <span class="nav-link-text">Reviews</span>
+                    <span class="nav-link-line"></span>
+                </a>
+            </div>
+
+            <div class="navbar-right">
+                <a href="booking.html" class="btn-book magnetic-btn">
+                    <span>Book Now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <button class="menu-toggle">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== FULLSCREEN MOBILE MENU ===== -->
+    <div class="fullscreen-menu">
+        <div class="menu-bg"></div>
+        <div class="menu-container">
+            <div class="menu-header">
+                <a href="index.html" class="menu-logo">
+                    <img src="assets/logo.jpeg" alt="Aahana Inn" style="width:40px; border-radius:50%; margin-right:10px;" onerror="this.style.display='none'">
+                    <span>Aahana Inn</span>
+                </a>
+                <button class="menu-close">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="menu-content">
+                <div class="menu-links">
+                    <a href="index.html" class="menu-link" data-text="Home"><span class="menu-link-text">Home</span></a>
+                    <a href="rooms.html" class="menu-link" data-text="Rooms"><span class="menu-link-text">Rooms & Suites</span></a>
+                    <a href="booking.html" class="menu-link" data-text="Booking"><span class="menu-link-text">Booking</span></a>
+                    <a href="restaurant.html" class="menu-link" data-text="Restaurant"><span class="menu-link-text">Restaurant</span></a>
+                    <a href="gallery.html" class="menu-link active" data-text="Gallery"><span class="menu-link-text">Gallery</span></a>
+                    <a href="facilities.html" class="menu-link" data-text="Facilities"><span class="menu-link-text">Facilities</span></a>
+                    <a href="reviews.html" class="menu-link" data-text="Reviews"><span class="menu-link-text">Reviews</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== GALLERY 3D HERO ===== -->
+    <section class="gallery-hero">
+        <div class="gallery-hero-bg"></div>
+        <div id="hero-3d-container"></div>
+        <div class="gallery-hero-content">
+            <div class="hero-badge" data-aos="fade-down">
+                <i class="fas fa-camera"></i>
+                <span>Visual Journey</span>
+            </div>
+            <h1 class="gallery-hero-title" data-aos="fade-up">
+                <span class="title-line">Explore Our</span>
+                <span class="title-line highlight">Gallery</span>
+            </h1>
+            <p class="gallery-hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                Discover the elegance, luxury, and world-class amenities that define the Aahana Inn experience
+            </p>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY FILTER ===== -->
+    <section class="gallery-filter-section">
+        <div class="container">
+            <div class="filter-header" data-aos="fade-up">
+                <h2 class="section-title">Our Collections</h2>
+                <p class="section-subtitle">Browse through curated categories of luxury and comfort</p>
+            </div>
+            <div class="filter-buttons" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active magnetic-btn" data-filter="all">
+                    <span class="filter-icon"><i class="fas fa-th-large"></i></span>
+                    <span class="filter-text">All</span>
+                </button>
+                <button class="filter-btn magnetic-btn" data-filter="rooms">
+                    <span class="filter-icon"><i class="fas fa-bed"></i></span>
+                    <span class="filter-text">Rooms & Suites</span>
+                </button>
+                <button class="filter-btn magnetic-btn" data-filter="restaurant">
+                    <span class="filter-icon"><i class="fas fa-utensils"></i></span>
+                    <span class="filter-text">Restaurant</span>
+                </button>
+                <button class="filter-btn magnetic-btn" data-filter="amenities">
+                    <span class="filter-icon"><i class="fas fa-spa"></i></span>
+                    <span class="filter-text">Amenities</span>
+                </button>
+                <button class="filter-btn magnetic-btn" data-filter="exterior">
+                    <span class="filter-icon"><i class="fas fa-building"></i></span>
+                    <span class="filter-text">Exterior</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY GRID ===== -->
+    <section class="gallery-grid-section">
+        <div class="gallery-grid" id="gallery-grid">
+            <!-- Dynamically inserted by JS -->
+        </div>
+    </section>
+
+    <!-- ===== LIGHTBOX MODAL ===== -->
+    <div class="lightbox-modal" id="lightbox">
+        <button class="lightbox-close magnetic-btn" id="lightbox-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-prev magnetic-btn" id="lightbox-prev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-next magnetic-btn" id="lightbox-next">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-img" class="lightbox-image">
+            <div class="lightbox-info">
+                <h3 class="lightbox-title" id="lightbox-title"></h3>
+                <p class="lightbox-category" id="lightbox-category"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODERN FOOTER WITH INTEGRATED MAP ===== -->
+    <footer class="modern-footer">
+        <div class="footer-top-accent"></div>
+        <div class="container">
+            <div class="footer-main-grid">
+                
+                <!-- Column 1: Brand -->
+                <div class="footer-brand-col" data-aos="fade-up" data-aos-delay="100">
+                    <a href="index.html" class="footer-brand-logo">
+                        <img src="assets/logo.jpeg" alt="Aahana Inn Logo" style="width: 60px; border-radius: 50%; border: 2px solid #D4AF37; margin-bottom: 15px;" onerror="this.style.display='none'">
+                        <span class="logo-name">Aahana Inn</span>
+                    </a>
+                    <p class="footer-bio">Experience the true meaning of premium comfort and hospitality in the heart of Dumka.</p>
+                    <p class="proprietor-info">Managed by: <strong>Manish Kumar Gupta</strong> (Proprietor)</p>
+                    
+                    <div class="footer-socials">
+                        <a href="#" class="magnetic-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/aahanainn" target="_blank" class="magnetic-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="magnetic-btn"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Column 2: Links -->
+                <div class="footer-links-col" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Home</a></li>
+                        <li><a href="rooms.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Rooms & Suites</a></li>
+                        <li><a href="booking.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Booking</a></li>
+                        <li><a href="restaurant.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Restaurant</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Contact Info (User Provided) -->
+                <div class="footer-contact-col" data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-contact-list">
+                        <li class="glass-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <a href="https://maps.app.goo.gl/erCbBhzBPLD3dCs27?g_st=ac" target="_blank" rel="noopener" style="color:inherit; text-decoration:none;">Dumka Bypass, Near Sandhya Sagar Restaurant, Balia Dangal, Dumka, Jharkhand 814110</a>
+                        </li>
+                        <li class="glass-contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 9204843479</span>
+                        </li>
+                        <li class="glass-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:support@aahanainn.com" style="color:inherit; text-decoration:none;">support@aahanainn.com</a>
+                        </li>
+                        <li class="glass-contact-item">
+                            <i class="fab fa-google"></i>
+                            <a href="mailto:aahanainn@gmail.com" style="color:inherit; text-decoration:none;">aahanainn@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Google Map (User Provided) -->
+                <div class="footer-map-col" data-aos="fade-up" data-aos-delay="400">
+                    <h4 class="footer-heading">Our Location</h4>
+                    <div class="footer-map-wrapper" style="position: relative;">
+                        <!-- Exact Static Pin Embed -->
+                        <a href="https://maps.app.goo.gl/erCbBhzBPLD3dCs27?g_st=ac" target="_blank" rel="noopener" aria-label="Open Aahana Inn location in Google Maps" style="display:block;">
+                            <iframe 
+                                src="https://maps.google.com/maps?q=24.276842,87.257179&t=&z=18&ie=UTF8&iwloc=&output=embed" 
+                                style="border:0; pointer-events:none; width:100%; height:200px; border-radius:15px; filter: grayscale(50%) contrast(1.1);" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </a>
+                        <!-- Directions Button — opens the exact hotel location -->
+                        <a href="https://maps.app.goo.gl/erCbBhzBPLD3dCs27?g_st=ac" target="_blank" rel="noopener" class="btn-directions magnetic-btn">
+                            <i class="fas fa-directions"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 Aahana Inn. All Rights Reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top magnetic-btn" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>

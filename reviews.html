@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read what our guests say about their premium stay at Aahana Inn, Dumka.">
+    <meta name="keywords" content="hotel reviews, aahana inn feedback, dumka accommodation ratings">
+    <meta name="author" content="Aahana Inn">
+    <title>Guest Reviews | Aahana Inn</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpeg">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="reviews.css">
+</head>
+<body>
+    <!-- ===== PRELOADER ===== -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+            <p class="preloader-text">Aahana Inn</p>
+        </div>
+    </div>
+
+    <!-- ===== CURSOR FOLLOWER ===== -->
+    <div class="cursor-follower"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar glass-nav">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <div class="logo-wrapper">
+                    <img src="assets/logo.jpeg" alt="" class="logo-img" onerror="this.style.display='none'">
+                    <div class="logo-text">
+                        <span class="logo-name">Aahana</span>
+                        <span class="logo-tagline">Inn</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Updated Navbar from your snippet -->
+            <div class="navbar-menu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-link-text">Home</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="rooms.html" class="nav-link">
+                    <span class="nav-link-text">Rooms</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="booking.html" class="nav-link">
+                    <span class="nav-link-text">Booking</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="restaurant.html" class="nav-link">
+                    <span class="nav-link-text">Restaurant</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="gallery.html" class="nav-link">
+                    <span class="nav-link-text">Gallery</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="facilities.html" class="nav-link">
+                    <span class="nav-link-text">Facilities</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="reviews.html" class="nav-link active">
+                    <span class="nav-link-text">Reviews</span>
+                    <span class="nav-link-line"></span>
+                </a>
+            </div>
+
+            <div class="navbar-right">
+                <a href="booking.html" class="btn-book magnetic-btn">
+                    <span>Book Now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <button class="menu-toggle">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== FULLSCREEN MENU FOR MOBILE ===== -->
+    <div class="fullscreen-menu">
+        <div class="menu-bg"></div>
+        <div class="menu-container">
+            <div class="menu-header">
+                <a href="index.html" class="menu-logo">
+                    <span>Aahana Inn</span>
+                </a>
+                <button class="menu-close"><span></span><span></span></button>
+            </div>
+            <div class="menu-content">
+                <div class="menu-links">
+                    <a href="index.html" class="menu-link" data-text="Home"><span class="menu-link-text">Home</span></a>
+                    <a href="rooms.html" class="menu-link" data-text="Rooms"><span class="menu-link-text">Rooms & Suites</span></a>
+                    <a href="booking.html" class="menu-link" data-text="Booking"><span class="menu-link-text">Booking</span></a>
+                    <a href="restaurant.html" class="menu-link" data-text="Restaurant"><span class="menu-link-text">Restaurant</span></a>
+                    <a href="reviews.html" class="menu-link" data-text="Reviews"><span class="menu-link-text">Reviews</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+        <div class="parallax-bg" id="hero-parallax">
+            <div class="hero-slide-bg" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80'); filter: brightness(0.6);"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <div class="hero-badge" data-aos="fade-down" data-aos-duration="1000">
+                <span class="badge-line"></span>
+                <span class="badge-text">Testimonials</span>
+                <span class="badge-line"></span>
+            </div>
+            <h1 class="hero-title" data-aos="zoom-out-up" data-aos-duration="1200" data-aos-delay="200">
+                <span class="title-main">Guest Experiences</span>
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                Stories of luxury, comfort, and unforgettable memories.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== RATING OVERVIEW ===== -->
+    <section class="rating-overview-section" data-aos="fade-up">
+        <div class="container">
+            <div class="rating-box glassmorphism">
+                <div class="rating-score">
+                    <h2>4.8</h2>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>Based on 500+ Verified Reviews</p>
+                </div>
+                <div class="rating-bars">
+                    <div class="bar-item">
+                        <span>Cleanliness</span>
+                        <div class="bar-track"><div class="bar-fill" style="width: 98%;"></div></div>
+                        <span>4.9</span>
+                    </div>
+                    <div class="bar-item">
+                        <span>Service</span>
+                        <div class="bar-track"><div class="bar-fill" style="width: 95%;"></div></div>
+                        <span>4.8</span>
+                    </div>
+                    <div class="bar-item">
+                        <span>Location</span>
+                        <div class="bar-track"><div class="bar-fill" style="width: 90%;"></div></div>
+                        <span>4.5</span>
+                    </div>
+                    <div class="bar-item">
+                        <span>Value</span>
+                        <div class="bar-track"><div class="bar-fill" style="width: 94%;"></div></div>
+                        <span>4.7</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== REVIEWS GRID ===== -->
+    <section class="reviews-grid-section">
+        <div class="container">
+            <div class="reviews-grid">
+                
+                <!-- Review Card 1 -->
+                <div class="detailed-review-card glassmorphism" data-aos="fade-up" data-aos-delay="100">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="avatar">R</div>
+                            <div>
+                                <h4>Rajesh S.</h4>
+                                <span><i class="fas fa-check-circle" style="color: #2ECC71;"></i> Verified Guest</span>
+                            </div>
+                        </div>
+                        <div class="review-date">Oct 2026</div>
+                    </div>
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <h3 class="review-title">"Absolutely perfect stay"</h3>
+                    <p class="review-body">The rooms were spotless, the ambiance was royal, and the staff was extremely courteous. From the moment we checked in, we felt like VIPs. Highly recommend Aahana Inn for anyone visiting Dumka!</p>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="detailed-review-card glassmorphism" data-aos="fade-up" data-aos-delay="200">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="avatar" style="background: #E8C547; color: #000;">A</div>
+                            <div>
+                                <h4>Amit K.</h4>
+                                <span><i class="fas fa-check-circle" style="color: #2ECC71;"></i> Verified Guest</span>
+                            </div>
+                        </div>
+                        <div class="review-date">Sep 2026</div>
+                    </div>
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                    <h3 class="review-title">"Best premium hotel in Dumka!"</h3>
+                    <p class="review-body">The food at Sandhya Sagar restaurant was delicious, and the location is highly convenient. The valet parking made everything seamless. The only minor issue was the WiFi being slightly slow in the lobby.</p>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="detailed-review-card glassmorphism" data-aos="fade-up" data-aos-delay="300">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="avatar" style="background: #8E44AD;">S</div>
+                            <div>
+                                <h4>Sneha M.</h4>
+                                <span><i class="fas fa-check-circle" style="color: #2ECC71;"></i> Verified Guest</span>
+                            </div>
+                        </div>
+                        <div class="review-date">Aug 2026</div>
+                    </div>
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <h3 class="review-title">"Beautiful interiors and a truly luxurious feel"</h3>
+                    <p class="review-body">Will definitely book again for my next business trip to Jharkhand. The Executive Suite had an amazing living space to conduct my meetings, and the room service was exceptionally fast.</p>
+                </div>
+
+                <!-- Review Card 4 -->
+                <div class="detailed-review-card glassmorphism" data-aos="fade-up" data-aos-delay="100">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="avatar" style="background: #E74C3C;">V</div>
+                            <div>
+                                <h4>Vikram D.</h4>
+                                <span><i class="fas fa-check-circle" style="color: #2ECC71;"></i> Verified Guest</span>
+                            </div>
+                        </div>
+                        <div class="review-date">Jul 2026</div>
+                    </div>
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <h3 class="review-title">"Top-notch amenities"</h3>
+                    <p class="review-body">The bed was incredibly comfortable and the amenities provided were top-notch. A beautiful property managed excellently. The spa package is highly recommended for couples!</p>
+                </div>
+                
+                <!-- Review Card 5 -->
+                <div class="detailed-review-card glassmorphism" data-aos="fade-up" data-aos-delay="200">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="avatar" style="background: #3498DB;">P</div>
+                            <div>
+                                <h4>Priya R.</h4>
+                                <span><i class="fas fa-check-circle" style="color: #2ECC71;"></i> Verified Guest</span>
+                            </div>
+                        </div>
+                        <div class="review-date">Jun 2026</div>
+                    </div>
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <h3 class="review-title">"A memorable family vacation"</h3>
+                    <p class="review-body">We booked the Family Suite and it was perfect. The kids loved the space and the food options were great for them. Thank you to the wonderful staff for making us feel at home.</p>
+                </div>
+
+                <!-- Review Card 6 -->
+                <div class="detailed-review-card glassmorphism" data-aos="fade-up" data-aos-delay="300">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="avatar" style="background: #2ECC71;">M</div>
+                            <div>
+                                <h4>Manish G.</h4>
+                                <span><i class="fas fa-check-circle" style="color: #2ECC71;"></i> Verified Guest</span>
+                            </div>
+                        </div>
+                        <div class="review-date">May 2026</div>
+                    </div>
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <h3 class="review-title">"Exceptional Dining Experience"</h3>
+                    <p class="review-body">Even if you don't stay here, you MUST visit the restaurant. The Awadhi Dum Pukht Biryani is out of this world. The luxury vibe extends beautifully to the dining hall.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-40" data-aos="fade-up">
+                <button class="btn btn-outline magnetic-btn load-more-btn">
+                    <span>Load More Reviews</span> <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LEAVE A REVIEW SECTION ===== -->
+    <section class="leave-review-section">
+        <div class="container">
+            <div class="review-form-wrapper glassmorphism" data-aos="zoom-in">
+                <div class="review-form-text">
+                    <span class="section-badge" style="justify-content: flex-start;">Feedback</span>
+                    <h2 class="section-title text-left">Share Your Experience</h2>
+                    <p class="section-description text-left">We continuously strive to improve. Let us know how your stay was, and help future guests make their choice.</p>
+                </div>
+                <form class="review-form" id="reviewForm">
+                    <div class="rating-input-group">
+                        <label class="form-label">Rate Your Stay</label>
+                        <div class="star-rating-input">
+                            <input type="radio" id="star5" name="rating" value="5"><label for="star5"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star4" name="rating" value="4"><label for="star4"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star3" name="rating" value="3"><label for="star3"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star2" name="rating" value="2"><label for="star2"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star1" name="rating" value="1"><label for="star1"><i class="fas fa-star"></i></label>
+                        </div>
+                    </div>
+                    <div class="form-row-grid">
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" placeholder="Email Address" required>
+                        </div>
+                    </div>
+                    <div class="form-group mt-20">
+                        <input type="text" class="form-input" placeholder="Review Title (e.g. Amazing Stay!)" required>
+                    </div>
+                    <div class="form-group mt-20">
+                        <textarea class="form-input" rows="4" placeholder="Write your full review here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-gold btn-block magnetic-btn mt-20">
+                        <span>Submit Review</span> <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MODERN FOOTER WITH INTEGRATED MAP (UPDATED AS REQUESTED) ===== -->
+    <footer class="modern-footer">
+        <div class="footer-top-accent"></div>
+        <div class="container">
+            <div class="footer-main-grid">
+                
+                <div class="footer-brand-col" data-aos="fade-up" data-aos-delay="100">
+                    <a href="index.html" class="footer-brand-logo">
+                        <img src="assets/logo.jpeg" alt="Aahana Inn Logo" style="width: 60px; border-radius: 50%; border: 2px solid #D4AF37; margin-bottom: 15px;" onerror="this.style.display='none'">
+                        <span class="logo-name">Aahana Inn</span>
+                    </a>
+                    <p class="footer-bio">Experience the true meaning of premium comfort and hospitality in the heart of Dumka.</p>
+                    <p class="proprietor-info">Managed by: <strong>Manish Kumar Gupta</strong> (Proprietor)</p>
+                    
+                    <div class="footer-socials">
+                        <a href="#" class="magnetic-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="magnetic-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="magnetic-btn"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-col" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Home</a></li>
+                        <li><a href="rooms.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Rooms & Suites</a></li>
+                        <li><a href="booking.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Booking</a></li>
+                        <li><a href="restaurant.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Restaurant</a></li>
+                    </ul>
+                </div>
+                
+                <!-- UPDATED CONTACT INFO -->
+                <div class="footer-contact-col" data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-contact-list">
+                        <li class="glass-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <a href="https://maps.app.goo.gl/erCbBhzBPLD3dCs27?g_st=ac" target="_blank" rel="noopener" style="color:inherit; text-decoration:none;">Dumka Bypass, Near Sandhya Sagar Restaurant, Balia Dangal, Dumka, Jharkhand 814110</a>
+                        </li>
+                        <li class="glass-contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 9204843479</span>
+                        </li>
+                        <li class="glass-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:support@aahanainn.com" style="color:inherit; text-decoration:none;">support@aahanainn.com</a>
+                        </li>
+                        <li class="glass-contact-item">
+                            <i class="fab fa-google"></i>
+                            <a href="mailto:aahanainn@gmail.com" style="color:inherit; text-decoration:none;">aahanainn@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- UPDATED GOOGLE MAP COL -->
+                <div class="footer-map-col" data-aos="fade-up" data-aos-delay="400">
+                    <h4 class="footer-heading">Our Location</h4>
+                    <div class="footer-map-wrapper" style="position: relative;">
+                        <!-- Exact Static Pin Embed -->
+                        <a href="https://maps.app.goo.gl/erCbBhzBPLD3dCs27?g_st=ac" target="_blank" rel="noopener" aria-label="Open Aahana Inn location in Google Maps" style="display:block;">
+                            <iframe 
+                                src="https://maps.google.com/maps?q=24.276842,87.257179&t=&z=18&ie=UTF8&iwloc=&output=embed" 
+                                style="border:0; pointer-events:none; width:100%; height:200px; border-radius:15px; filter: grayscale(50%) contrast(1.1);" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </a>
+                        
+                        <!-- Directions Button — opens the exact hotel location -->
+                        <a href="https://maps.app.goo.gl/erCbBhzBPLD3dCs27?g_st=ac" target="_blank" rel="noopener" class="btn-directions magnetic-btn">
+                            <i class="fas fa-directions"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 Aahana Inn. All Rights Reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top magnetic-btn" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="reviews.js"></script>
+</body>
+</html>

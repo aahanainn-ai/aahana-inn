@@ -1,0 +1,194 @@
+/**
+ * Aahana Inn - Reviews Page JavaScript
+ * Fixed Preloader, Form Submission, and Animations
+ */
+
+document.addEventListener('DOMContentLoaded', function() {
+    'use strict';
+
+    // ===== PRELOADER (FIXED) =====
+    // Hides the preloader automatically without waiting for heavy images to finish downloading
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        setTimeout(function() {
+            preloader.classList.add('hidden');
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 800);
+        }, 500); // 0.5 second delay for a smooth entrance
+    }
+
+    // ===== CUSTOM CURSOR & MAGNETIC BUTTONS (Desktop Only) =====
+    const cursorFollower = document.querySelector('.cursor-follower');
+    const cursorDot = document.querySelector('.cursor-dot');
+    
+    if (window.matchMedia('(hover: hover)').matches && cursorFollower && cursorDot) {
+        let mouseX = 0, mouseY = 0, followerX = 0, followerY = 0;
+        
+        document.addEventListener('mousemove', function(e) {
+            mouseX = e.clientX; mouseY = e.clientY;
+            cursorDot.style.left = mouseX + 'px';
+            cursorDot.style.top = mouseY + 'px';
+        });
+
+        function animateCursor() {
+            followerX += (mouseX - followerX) * 0.15;
+            followerY += (mouseY - followerY) * 0.15;
+            cursorFollower.style.left = followerX + 'px';
+            cursorFollower.style.top = followerY + 'px';
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        const hoverElements = document.querySelectorAll('a, button, input, textarea, .glass-contact-item, label');
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', function() {
+                cursorFollower.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                cursorFollower.style.borderColor = 'rgba(255, 255, 255, 0.8)';
+                cursorFollower.style.backgroundColor = 'rgba(212, 175, 55, 0.1)';
+                cursorDot.style.backgroundColor = '#ffffff';
+                cursorDot.style.transform = 'translate(-50%, -50%) scale(0.5)';
+            });
+            el.addEventListener('mouseleave', function() {
+                cursorFollower.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursorFollower.style.borderColor = 'var(--primary-gold)';
+                cursorFollower.style.backgroundColor = 'transparent';
+                cursorDot.style.backgroundColor = 'var(--primary-gold)';
+                cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
+            });
+        });
+
+        const magneticBtns = document.querySelectorAll('.magnetic-btn');
+        magneticBtns.forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px) scale(1.02)`;
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translate(0px, 0px) scale(1)';
+            });
+        });
+    }
+
+    // ===== NAVBAR SCROLL EFFECT & PARALLAX =====
+    const navbar = document.querySelector('.navbar');
+    const backToTop = document.getElementById('backToTop');
+    const heroParallax = document.getElementById('hero-parallax');
+    
+    window.addEventListener('scroll', function() {
+        const scrollY = window.scrollY;
+        if (navbar) {
+            if (scrollY > 50) { navbar.classList.add('scrolled', 'glass-nav'); } 
+            else { navbar.classList.remove('scrolled', 'glass-nav'); }
+        }
+        if(heroParallax && scrollY < window.innerHeight) {
+            heroParallax.style.transform = `translateY(${scrollY * 0.4}px)`;
+        }
+        if (backToTop) {
+            if (scrollY > 600) { backToTop.classList.add('visible'); } 
+            else { backToTop.classList.remove('visible'); }
+        }
+    });
+
+    if (backToTop) {
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // ===== MOBILE MENU TOGGLE =====
+    const menuToggle = document.querySelector('.menu-toggle');
+    const fullscreenMenu = document.querySelector('.fullscreen-menu');
+    const menuClose = document.querySelector('.menu-close');
+
+    const closeMenu = () => {
+        if(menuToggle) {
+            menuToggle.classList.remove('active');
+            const lines = menuToggle.querySelectorAll('.menu-line');
+            if(lines.length === 3) {
+                lines[0].style.transform = 'none';
+                lines[1].style.opacity = '1';
+                lines[1].style.transform = 'none';
+                lines[2].style.transform = 'none';
+            }
+        }
+        if(fullscreenMenu) fullscreenMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+
+    if (menuToggle && fullscreenMenu && menuClose) {
+        menuToggle.addEventListener('click', function() {
+            if(!this.classList.contains('active')) {
+                this.classList.add('active');
+                fullscreenMenu.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                const lines = this.querySelectorAll('.menu-line');
+                if(lines.length === 3) {
+                    lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    lines[1].style.opacity = '0';
+                    lines[1].style.transform = 'translateX(-20px)';
+                    lines[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+                }
+            } else { closeMenu(); }
+        });
+        menuClose.addEventListener('click', closeMenu);
+    }
+
+    // ===== REVIEW FORM SUBMISSION =====
+    const reviewForm = document.getElementById('reviewForm');
+    if (reviewForm) {
+        reviewForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Check if rating is selected
+            const ratingSelected = document.querySelector('input[name="rating"]:checked');
+            if(!ratingSelected) {
+                alert("Please select a star rating!");
+                return;
+            }
+
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-check-circle"></i> Review Submitted!';
+                btn.style.background = 'linear-gradient(135deg, #27AE60, #2ECC71)';
+                btn.style.color = '#fff';
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.background = '';
+                    btn.style.color = '';
+                    btn.disabled = false;
+                    reviewForm.reset();
+                }, 3000);
+            }, 1500);
+        });
+    }
+
+    // ===== LOAD MORE BUTTON SIMULATION =====
+    const loadMoreBtn = document.querySelector('.load-more-btn');
+    if(loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', function() {
+            const originalContent = this.innerHTML;
+            this.innerHTML = 'Loading <i class="fas fa-spinner fa-spin"></i>';
+            setTimeout(() => {
+                this.innerHTML = "You've reached the end!";
+                this.style.pointerEvents = 'none';
+                this.style.borderColor = 'rgba(255,255,255,0.2)';
+                this.style.color = 'rgba(255,255,255,0.5)';
+            }, 1500);
+        });
+    }
+
+    // ===== AOS INITIALIZATION =====
+    if (typeof AOS !== 'undefined') {
+        AOS.init({ duration: 1000, easing: 'ease-out-quint', once: true, offset: 50 });
+    }
+});

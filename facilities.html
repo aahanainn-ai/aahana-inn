@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aahana Inn Facilities - World-class luxury amenities including spa, infinity pool, fitness center, and more">
+    <meta name="keywords" content="hotel facilities, luxury spa, infinity pool, fitness center, 5 star amenities, aahana inn">
+    <title>Aahana Inn - World-Class Luxury Facilities</title>
+    
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Montserrat:wght@200;300;400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="facilities.css">
+</head>
+<body>
+    <!-- ===== PRELOADER ===== -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-icon">
+                <i class="fas fa-spa"></i>
+            </div>
+            <h2 class="preloader-title">Aahana Inn</h2>
+            <div class="preloader-facilities">
+                <div class="facility-dot"></div>
+                <div class="facility-dot"></div>
+                <div class="facility-dot"></div>
+                <div class="facility-dot"></div>
+                <div class="facility-dot"></div>
+            </div>
+            <p class="preloader-text">Loading Premium Facilities...</p>
+        </div>
+    </div>
+
+    <!-- ===== CUSTOM CURSOR ===== -->
+    <div class="cursor-follower"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar glass-nav">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <img src="assets/logo.jpeg" alt="Aahana Inn Logo" class="logo-img" onerror="this.style.display='none'">
+                <div class="logo-text">
+                    <span class="logo-name">Aahana</span>
+                    <span class="logo-tagline">Inn</span>
+                </div>
+            </a>
+
+            <div class="navbar-menu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-link-text">Home</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="rooms.html" class="nav-link">
+                    <span class="nav-link-text">Rooms</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="booking.html" class="nav-link">
+                    <span class="nav-link-text">Booking</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="restaurant.html" class="nav-link">
+                    <span class="nav-link-text">Restaurant</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="gallery.html" class="nav-link">
+                    <span class="nav-link-text">Gallery</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="facilities.html" class="nav-link active">
+                    <span class="nav-link-text">Facilities</span>
+                    <span class="nav-link-line"></span>
+                </a>
+                <a href="reviews.html" class="nav-link">
+                    <span class="nav-link-text">Reviews</span>
+                    <span class="nav-link-line"></span>
+                </a>
+            </div>
+
+            <div class="navbar-right">
+                <a href="booking.html" class="btn-book magnetic-btn">
+                    <span>Book Now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <button class="menu-toggle">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== FULLSCREEN MENU ===== -->
+    <div class="fullscreen-menu">
+        <div class="menu-bg"></div>
+        <div class="menu-container">
+            <div class="menu-header">
+                <a href="index.html" class="menu-logo">
+                    <img src="assets/logo.jpeg" alt="Aahana Inn" style="width:40px; border-radius:50%; margin-right:10px;" onerror="this.style.display='none'">
+                    <span>Aahana Inn</span>
+                </a>
+                <button class="menu-close">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="menu-content">
+                <div class="menu-links">
+                    <a href="index.html" class="menu-link" data-text="Home"><span class="menu-link-text">Home</span></a>
+                    <a href="rooms.html" class="menu-link" data-text="Rooms"><span class="menu-link-text">Rooms & Suites</span></a>
+                    <a href="booking.html" class="menu-link" data-text="Booking"><span class="menu-link-text">Booking</span></a>
+                    <a href="restaurant.html" class="menu-link" data-text="Restaurant"><span class="menu-link-text">Restaurant</span></a>
+                    <a href="gallery.html" class="menu-link" data-text="Gallery"><span class="menu-link-text">Gallery</span></a>
+                    <a href="facilities.html" class="menu-link active" data-text="Facilities"><span class="menu-link-text">Facilities</span></a>
+                    <a href="reviews.html" class="menu-link" data-text="Reviews"><span class="menu-link-text">Reviews</span></a>
+                </div>
+                <div class="menu-contact">
+                    <p class="menu-contact-title">Get In Touch</p>
+                    <p class="menu-contact-number">+91 9204843479</p>
+                    <p class="menu-contact-email">support@aahanainn.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FACILITIES HERO SECTION ===== -->
+    <section class="facilities-hero">
+        <div class="facilities-hero-bg"></div>
+        <div class="facilities-hero-overlay"></div>
+        <div class="facilities-hero-content">
+            <div class="hero-badge" data-aos="fade-down">
+                <i class="fas fa-star"></i>
+                <span>Premium Amenities</span>
+            </div>
+            <h1 class="facilities-hero-title" data-aos="fade-up">
+                <span class="title-line">World-Class</span>
+                <span class="title-line highlight">Luxury Facilities</span>
+            </h1>
+            <p class="facilities-hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                Indulge in our exceptional collection of premium amenities designed for your ultimate comfort and relaxation
+            </p>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Discover</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURED FACILITY - SPA ===== -->
+    <section class="featured-facility" id="spa">
+        <div class="container">
+            <div class="featured-facility-grid">
+                <div class="featured-facility-image image-zoom" data-aos="fade-right">
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80" alt="Luxury Spa">
+                        <div class="image-badge">
+                            <i class="fas fa-award"></i>
+                            <span>Award Winning</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="featured-facility-content" data-aos="fade-left">
+                    <div class="facility-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h2 class="facility-title">Luxury Spa & Wellness</h2>
+                    <p class="facility-description">
+                        Escape into tranquility at our award-winning spa. Our expert therapists combine ancient healing traditions with modern techniques to rejuvenate your body, mind, and soul.
+                    </p>
+                    <div class="facility-features">
+                        <div class="feature-item">
+                            <i class="fas fa-hot-tub"></i>
+                            <span>Hot Stone Therapy</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>Aromatherapy</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-water"></i>
+                            <span>Hydrotherapy Pool</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-fire"></i>
+                            <span>Finnish Sauna</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-wind"></i>
+                            <span>Steam Rooms</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-hand-holding-heart"></i>
+                            <span>Couples Treatments</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary magnetic-btn">
+                        <span>Book Spa Session</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FACILITIES GRID ===== -->
+    <section class="facilities-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Our Amenities</span>
+                <h2 class="section-title">Exceptional Facilities</h2>
+                <p class="section-subtitle">Discover our comprehensive range of world-class amenities</p>
+            </div>
+
+            <div class="facilities-grid">
+                <!-- Infinity Pool -->
+                <div class="facility-card glassmorphism" data-aos="fade-up" data-aos-delay="100">
+                    <div class="facility-card-image image-zoom">
+                        <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&q=80" alt="Infinity Pool">
+                        <div class="facility-card-overlay">
+                            <div class="overlay-icon">
+                                <i class="fas fa-swimmer"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facility-card-content">
+                        <div class="facility-card-icon">
+                            <i class="fas fa-swimmer"></i>
+                        </div>
+                        <h3 class="facility-card-title">Infinity Pool</h3>
+                        <p class="facility-card-description">
+                            Stunning rooftop infinity pool with panoramic city views, private cabanas, and poolside bar service.
+                        </p>
+                        <ul class="facility-card-features">
+                            <li><i class="fas fa-check"></i> Heated Pool</li>
+                            <li><i class="fas fa-check"></i> Private Cabanas</li>
+                            <li><i class="fas fa-check"></i> Poolside Bar</li>
+                            <li><i class="fas fa-check"></i> Open 24/7</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Fitness Center -->
+                <div class="facility-card glassmorphism" data-aos="fade-up" data-aos-delay="200">
+                    <div class="facility-card-image image-zoom">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80" alt="Fitness Center">
+                        <div class="facility-card-overlay">
+                            <div class="overlay-icon">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facility-card-content">
+                        <div class="facility-card-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h3 class="facility-card-title">Fitness Center</h3>
+                        <p class="facility-card-description">
+                            State-of-the-art gym equipped with the latest Technogym equipment and personal trainers.
+                        </p>
+                        <ul class="facility-card-features">
+                            <li><i class="fas fa-check"></i> Personal Trainers</li>
+                            <li><i class="fas fa-check"></i> Yoga Classes</li>
+                            <li><i class="fas fa-check"></i> Cardio Zone</li>
+                            <li><i class="fas fa-check"></i> 24/7 Access</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Rooftop Bar -->
+                <div class="facility-card glassmorphism" data-aos="fade-up" data-aos-delay="300">
+                    <div class="facility-card-image image-zoom">
+                        <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=600&q=80" alt="Rooftop Bar">
+                        <div class="facility-card-overlay">
+                            <div class="overlay-icon">
+                                <i class="fas fa-glass-martini-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facility-card-content">
+                        <div class="facility-card-icon">
+                            <i class="fas fa-glass-martini-alt"></i>
+                        </div>
+                        <h3 class="facility-card-title">Rooftop Bar</h3>
+                        <p class="facility-card-description">
+                            Signature cocktails and breathtaking views at our exclusive rooftop bar with live entertainment.
+                        </p>
+                        <ul class="facility-card-features">
+                            <li><i class="fas fa-check"></i> Craft Cocktails</li>
+                            <li><i class="fas fa-check"></i> Live Music</li>
+                            <li><i class="fas fa-check"></i> VIP Lounge</li>
+                            <li><i class="fas fa-check"></i> City Views</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Business Center -->
+                <div class="facility-card glassmorphism" data-aos="fade-up" data-aos-delay="400">
+                    <div class="facility-card-image image-zoom">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Business Center">
+                        <div class="facility-card-overlay">
+                            <div class="overlay-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facility-card-content">
+                        <div class="facility-card-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="facility-card-title">Business Center</h3>
+                        <p class="facility-card-description">
+                            Full-service business facilities with meeting rooms, conference halls, and secretarial services.
+                        </p>
+                        <ul class="facility-card-features">
+                            <li><i class="fas fa-check"></i> Meeting Rooms</li>
+                            <li><i class="fas fa-check"></i> Conference Hall</li>
+                            <li><i class="fas fa-check"></i> Video Conferencing</li>
+                            <li><i class="fas fa-check"></i> Secretarial Services</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kids Club -->
+                <div class="facility-card glassmorphism" data-aos="fade-up" data-aos-delay="500">
+                    <div class="facility-card-image image-zoom">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80" alt="Kids Club">
+                        <div class="facility-card-overlay">
+                            <div class="overlay-icon">
+                                <i class="fas fa-child"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facility-card-content">
+                        <div class="facility-card-icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h3 class="facility-card-title">Kids Club</h3>
+                        <p class="facility-card-description">
+                            Fun and educational activities for our younger guests with supervised play areas.
+                        </p>
+                        <ul class="facility-card-features">
+                            <li><i class="fas fa-check"></i> Supervised Play</li>
+                            <li><i class="fas fa-check"></i> Educational Activities</li>
+                            <li><i class="fas fa-check"></i> Outdoor Games</li>
+                            <li><i class="fas fa-check"></i> Arts & Crafts</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Valet Parking -->
+                <div class="facility-card glassmorphism" data-aos="fade-up" data-aos-delay="600">
+                    <div class="facility-card-image image-zoom">
+                        <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=600&q=80" alt="Valet Parking">
+                        <div class="facility-card-overlay">
+                            <div class="overlay-icon">
+                                <i class="fas fa-car"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facility-card-content">
+                        <div class="facility-card-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3 class="facility-card-title">Valet Parking</h3>
+                        <p class="facility-card-description">
+                            Complimentary valet parking service with secure underground garage for all guests.
+                        </p>
+                        <ul class="facility-card-features">
+                            <li><i class="fas fa-check"></i> 24/7 Service</li>
+                            <li><i class="fas fa-check"></i> Secure Garage</li>
+                            <li><i class="fas fa-check"></i> EV Charging</li>
+                            <li><i class="fas fa-check"></i> Complimentary</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SPA TREATMENTS SECTION ===== -->
+    <section class="spa-treatments-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Spa Services</span>
+                <h2 class="section-title">Signature Treatments</h2>
+                <p class="section-subtitle">Discover our exclusive spa treatments designed for ultimate relaxation</p>
+            </div>
+
+            <div class="treatments-slider" data-aos="fade-up" data-aos-delay="200">
+                <div class="swiper treatmentsSwiper">
+                    <div class="swiper-wrapper">
+                        <!-- Treatment 1 -->
+                        <div class="swiper-slide">
+                            <div class="treatment-card glassmorphism">
+                                <div class="treatment-image image-zoom">
+                                    <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=400&q=80" alt="Hot Stone Massage">
+                                    <div class="treatment-duration">
+                                        <i class="fas fa-clock"></i>
+                                        <span>90 min</span>
+                                    </div>
+                                </div>
+                                <div class="treatment-content">
+                                    <h3 class="treatment-title">Hot Stone Massage</h3>
+                                    <p class="treatment-description">
+                                        Heated volcanic stones melt away tension while promoting deep relaxation.
+                                    </p>
+                                    <div class="treatment-price">
+                                        <span class="price-from">From</span>
+                                        <span class="price-amount">₹2,499</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Treatment 2 -->
+                        <div class="swiper-slide">
+                            <div class="treatment-card glassmorphism">
+                                <div class="treatment-image image-zoom">
+                                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=80" alt="Aromatherapy">
+                                    <div class="treatment-duration">
+                                        <i class="fas fa-clock"></i>
+                                        <span>60 min</span>
+                                    </div>
+                                </div>
+                                <div class="treatment-content">
+                                    <h3 class="treatment-title">Aromatherapy Journey</h3>
+                                    <p class="treatment-description">
+                                        Essential oils combined with gentle massage for mind-body harmony.
+                                    </p>
+                                    <div class="treatment-price">
+                                        <span class="price-from">From</span>
+                                        <span class="price-amount">₹1,999</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Treatment 3 -->
+                        <div class="swiper-slide">
+                            <div class="treatment-card glassmorphism">
+                                <div class="treatment-image image-zoom">
+                                    <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=400&q=80" alt="Facial Treatment">
+                                    <div class="treatment-duration">
+                                        <i class="fas fa-clock"></i>
+                                        <span>75 min</span>
+                                    </div>
+                                </div>
+                                <div class="treatment-content">
+                                    <h3 class="treatment-title">Royal Gold Facial</h3>
+                                    <p class="treatment-description">
+                                        24K gold-infused treatment for radiant, youthful skin.
+                                    </p>
+                                    <div class="treatment-price">
+                                        <span class="price-from">From</span>
+                                        <span class="price-amount">₹3,499</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next magnetic-btn"></div>
+                    <div class="swiper-button-prev magnetic-btn"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOURS SECTION ===== -->
+    <section class="hours-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Operating Hours</span>
+                <h2 class="section-title">When To Visit</h2>
+                <p class="section-subtitle">Our facilities are available at your convenience</p>
+            </div>
+
+            <div class="hours-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="hours-card glassmorphism">
+                    <div class="hours-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="hours-title">Spa & Wellness</h3>
+                    <div class="hours-time">
+                        <span class="time-day">Mon - Fri</span>
+                        <span class="time-hours">8:00 AM - 9:00 PM</span>
+                    </div>
+                    <div class="hours-time">
+                        <span class="time-day">Sat - Sun</span>
+                        <span class="time-hours">9:00 AM - 8:00 PM</span>
+                    </div>
+                </div>
+
+                <div class="hours-card glassmorphism">
+                    <div class="hours-icon">
+                        <i class="fas fa-swimmer"></i>
+                    </div>
+                    <h3 class="hours-title">Infinity Pool</h3>
+                    <div class="hours-time">
+                        <span class="time-day">Daily</span>
+                        <span class="time-hours">6:00 AM - 11:00 PM</span>
+                    </div>
+                    <div class="hours-note">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Adults only after 8 PM</span>
+                    </div>
+                </div>
+
+                <div class="hours-card glassmorphism">
+                    <div class="hours-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3 class="hours-title">Fitness Center</h3>
+                    <div class="hours-time">
+                        <span class="time-day">Daily</span>
+                        <span class="time-hours">24 Hours</span>
+                    </div>
+                    <div class="hours-note">
+                        <i class="fas fa-key"></i>
+                        <span>Room key access required</span>
+                    </div>
+                </div>
+
+                <div class="hours-card glassmorphism">
+                    <div class="hours-icon">
+                        <i class="fas fa-glass-martini-alt"></i>
+                    </div>
+                    <h3 class="hours-title">Rooftop Bar</h3>
+                    <div class="hours-time">
+                        <span class="time-day">Mon - Thu</span>
+                        <span class="time-hours">5:00 PM - 12:00 AM</span>
+                    </div>
+                    <div class="hours-time">
+                        <span class="time-day">Fri - Sun</span>
+                        <span class="time-hours">5:00 PM - 2:00 AM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="facilities-cta-section">
+        <div class="cta-bg"></div>
+        <div class="cta-overlay"></div>
+        <div class="cta-content" data-aos="fade-up">
+            <h2 class="cta-title">Ready to Experience Luxury?</h2>
+            <p class="cta-subtitle">Book your stay and enjoy complimentary access to all our premium facilities</p>
+            <div class="cta-buttons">
+                <a href="booking.html" class="btn btn-primary btn-large magnetic-btn">
+                    <span>Book Your Stay</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MODERN FOOTER WITH INTEGRATED MAP ===== -->
+    <footer class="modern-footer">
+        <div class="footer-top-accent"></div>
+        <div class="container">
+            <div class="footer-main-grid">
+                
+                <div class="footer-brand-col" data-aos="fade-up" data-aos-delay="100">
+                    <a href="index.html" class="footer-brand-logo">
+                        <img src="assets/logo.jpeg" alt="Aahana Inn Logo" style="width: 60px; border-radius: 50%; border: 2px solid #D4AF37; margin-bottom: 15px;" onerror="this.style.display='none'">
+                        <span class="logo-name">Aahana Inn</span>
+                    </a>
+                    <p class="footer-bio">Experience the true meaning of premium comfort and hospitality in the heart of Dumka.</p>
+                    <p class="proprietor-info">Managed by: <strong>Manish Kumar Gupta</strong> (Proprietor)[cite: 6]</p>
+                    
+                    <div class="footer-socials">
+                        <a href="#" class="magnetic-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/aahanainn?stkn=MTc1dm82ZXY0ZHBreA==" target="_blank" class="magnetic-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="magnetic-btn"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-col" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Home</a></li>
+                        <li><a href="rooms.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Rooms & Suites</a></li>
+                        <li><a href="booking.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Booking</a></li>
+                        <li><a href="restaurant.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Restaurant</a></li>
+                        <li><a href="reviews.html"><i class="fas fa-chevron-right" style="font-size: 0.6rem; color: #D4AF37; margin-right: 5px;"></i> Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact-col" data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-contact-list">
+                        <li class="glass-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <a href="https://maps.app.goo.gl/erCbBhzBPLD3dCs27?g_st=ac" target="_blank" rel="noopener" style="color:inherit; text-decoration:none;">Dumka Bypass, Near Sandhya Sagar Restaurant, Balia Dangal, Dumka, Jharkhand 814110</a>
+                        </li>
+                        <li class="glass-contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 9204843479</span>
+                        </li>
+                        <li class="glass-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:support@aahanainn.com" style="color:inherit; text-decoration:none;">support@aahanainn.com</a>
+                        </li>
+                        <li class="glass-contact-item">
+                            <i class="fab fa-google"></i>
+                            <a href="mailto:aahanainn@gmail.com" style="color:inherit; text-decoration:none;">aahanainn@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-map-col" data-aos="fade-up" data-aos-delay="400">
+                    <h4 class="footer-heading">Our Location</h4>
+                    <div class="footer-map-wrapper" style="position: relative;">
+                        <!-- Exact Static Pin Embed -->
+                        <a href="https://maps.app.goo.gl/erCbBhzBPLD3dCs27?g_st=ac" target="_blank" rel="noopener" aria-label="Open Aahana Inn location in Google Maps" style="display:block;">
+                            <iframe 
+                                src="https://maps.google.com/maps?q=24.276842,87.257179&t=&z=18&ie=UTF8&iwloc=&output=embed" 
+                                style="border:0; pointer-events:none; width:100%; height:200px; border-radius:15px; filter: grayscale(50%) contrast(1.1);" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </a>
+                        
+                        <!-- Directions Button -->
+                        <a href="https://maps.app.goo.gl/erCbBhzBPLD3dCs27?g_st=ac" target="_blank" rel="noopener" class="btn-directions magnetic-btn">
+                            <i class="fas fa-directions"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 Aahana Inn. All Rights Reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top magnetic-btn" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="facilities.js"></script>
+</body>
+</html>
